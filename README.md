@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="https://img.shields.io/badge/FiveM-Compatible-orange?style=for-the-badge&logo=fivem&logoColor=white" alt="FiveM" />
+  <img src="https://img.shields.io/badge/License-Open%20Source%20(No%20Resale)-red?style=for-the-badge" alt="License" />
+  <img src="https://img.shields.io/badge/Author-Zyra%20Store-5865F2?style=for-the-badge" alt="Author" />
+</p>
+
 # 🖥️ Zyra Loading Screen 5 - Tech Dashboard Edition
 
 Welcome to **Zyra-Loading-Screen-5**, a futuristic FiveM loading screen resource by **Zyra Store**. Designed as a high-tech Cyber HUD Dashboard with Orbitron typography and system diagnostic widgets.
