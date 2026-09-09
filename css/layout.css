@@ -1,0 +1,297 @@
+/* ==========================================================================
+   ZYRA STORE - REJILLA TECH Y MAQUETACIÓN DE CUADRO DE CONTROL (PREMIUM)
+   ========================================================================== */
+
+/* Fondos y Efectos Holográficos */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(3, 3, 3, 0.2) 0%, rgba(3, 3, 3, 0.95) 100%);
+    z-index: 3;
+    pointer-events: none;
+}
+
+.scanlines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(18, 16, 16, 0) 50%, 
+        rgba(0, 245, 255, 0.03) 50%
+    );
+    background-size: 100% 4px;
+    z-index: 4;
+    pointer-events: none;
+    opacity: 0.35;
+}
+
+.grid-perspective {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.08;
+    background-size: 40px 40px;
+    background-image: 
+        linear-gradient(to right, rgba(0, 245, 255, 0.25) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 245, 255, 0.25) 1px, transparent 1px);
+    transform: perspective(700px) rotateX(45deg);
+    transform-origin: top center;
+    pointer-events: none;
+    transition: transform 0.2s ease-out;
+}
+
+.glow-auras-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.glow-aura {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.04;
+    pointer-events: none;
+}
+
+.aura-1 {
+    background: var(--accent-pure-white);
+    top: -100px;
+    left: -100px;
+}
+
+.aura-2 {
+    background: #8b5cf6;
+    bottom: -150px;
+    right: -100px;
+}
+
+.bg-video-el {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Contenedor del Dashboard */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    padding: 3.5rem 5rem;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+
+/* Cabecera */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: var(--border-glass);
+    padding-bottom: 18px;
+    z-index: 10;
+}
+
+.header-logo-wrapper h1 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--text-primary);
+    text-transform: uppercase;
+}
+
+.header-logo-wrapper img {
+    max-height: 32px;
+    object-fit: contain;
+}
+
+.system-status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.4);
+    border: var(--border-glass);
+    padding: 5px 12px;
+    border-radius: 4px;
+}
+
+.status-dot-green {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 8px #10b981;
+}
+
+.status-code-text {
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+}
+
+/* Rejilla de Widgets */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-rows: 1fr 1.1fr;
+    gap: 20px;
+    flex-grow: 1;
+    margin: 2.2rem 0;
+    z-index: 10;
+}
+
+/* Estilos Generales de Tarjetas */
+.dashboard-card {
+    background: var(--bg-glass-card);
+    border: var(--border-glass);
+    border-radius: 6px;
+    padding: 20px;
+    backdrop-filter: blur(var(--blur-intensity));
+    -webkit-backdrop-filter: blur(var(--blur-intensity));
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-card:hover {
+    border-color: var(--border-glass-active);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.007);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    padding-bottom: 8px;
+}
+
+.card-title-code {
+    font-family: var(--font-heading);
+    font-size: 0.58rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+}
+
+.card-dot-decor {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Widgets específicos */
+.widget-brand {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.widget-links {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.widget-music {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.widget-news {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+/* Pie de Página */
+.dashboard-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    z-index: 10;
+}
+
+.loader-meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-console-log {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+}
+
+.console-prefix {
+    color: var(--accent-pure-white);
+    font-family: var(--font-heading);
+    font-weight: 800;
+}
+
+.console-text {
+    color: var(--text-secondary);
+}
+
+.percentage-count-wrapper {
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.percentage-label {
+    color: var(--text-muted);
+}
+
+.percentage-value-text {
+    color: var(--accent-pure-white);
+    font-weight: 800;
+}
+
+.footer-bottom-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.62rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}

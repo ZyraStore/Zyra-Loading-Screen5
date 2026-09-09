@@ -1,0 +1,70 @@
+/* ==========================================================================
+   ZYRA STORE - ANIMACIONES Y MOVIMIENTO HOLOGRÁFICO (PREMIUM)
+   ========================================================================== */
+
+/* Animación de entrada de tarjetas */
+@keyframes techCardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dashboard-header {
+    animation: techCardReveal 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.widget-brand {
+    animation: techCardReveal 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.widget-links {
+    animation: techCardReveal 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+.widget-music {
+    animation: techCardReveal 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+.widget-news {
+    animation: techCardReveal 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
+}
+
+.dashboard-footer {
+    animation: techCardReveal 1s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+}
+
+/* Animación de rebote de onda del visualizador */
+@keyframes techWaveBounce {
+    0% { height: 15%; }
+    100% { height: 100%; }
+}
+
+.widget-music.playing .wave-bar {
+    animation: techWaveBounce 0.85s ease-in-out infinite alternate;
+}
+
+.widget-music.playing .wave-bar:nth-child(1) { animation-delay: 0.1s; animation-duration: 0.7s; }
+.widget-music.playing .wave-bar:nth-child(2) { animation-delay: 0.25s; animation-duration: 0.9s; }
+.widget-music.playing .wave-bar:nth-child(3) { animation-delay: 0.45s; animation-duration: 0.6s; }
+.widget-music.playing .wave-bar:nth-child(4) { animation-delay: 0.15s; animation-duration: 0.8s; }
+.widget-music.playing .wave-bar:nth-child(5) { animation-delay: 0.3s; animation-duration: 1s; }
+.widget-music.playing .wave-bar:nth-child(6) { animation-delay: 0.05s; animation-duration: 0.75s; }
+.widget-music.playing .wave-bar:nth-child(7) { animation-delay: 0.5s; animation-duration: 0.95s; }
+.widget-music.playing .wave-bar:nth-child(8) { animation-delay: 0.2s; animation-duration: 0.65s; }
+.widget-music.playing .wave-bar:nth-child(9) { animation-delay: 0.35s; animation-duration: 0.85s; }
+.widget-music.playing .wave-bar:nth-child(10) { animation-delay: 0.12s; animation-duration: 0.72s; }
+
+/* Pulsación de luz sutil en la esquina */
+@keyframes glowPulse {
+    from { opacity: 0.03; }
+    to { opacity: 0.07; }
+}
+
+.glow-aura {
+    animation: glowPulse 4s ease-in-out infinite alternate;
+}

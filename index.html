@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zyra Store - Premium Tech Dashboard</title>
+    
+    <!-- Google Fonts: Orbitron (Futurista) & Inter (Lectura de datos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;600;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Hojas de Estilos Modulares (Prompt Maestro) -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+    <!-- Video de Fondo (Opcional) -->
+    <video id="bg-video" loop muted playsinline class="bg-video-el hidden"></video>
+
+    <!-- Perspectiva de Cuadrícula Vectorial Interactiva (Interactive Tech Grid) -->
+    <div class="grid-perspective" id="grid-perspective-layer"></div>
+    <div class="glow-auras-container">
+        <div class="glow-aura aura-1"></div>
+        <div class="glow-aura aura-2"></div>
+    </div>
+    
+    <!-- Capas de overlays visuales -->
+    <div class="overlay"></div>
+    <div class="scanlines"></div>
+
+    <!-- CONTENEDOR PRINCIPAL DEL DASHBOARD -->
+    <main class="dashboard-container" id="loading-container">
+        
+        <!-- CABECERA SUPERIOR -->
+        <header class="dashboard-header">
+            <div class="header-logo-wrapper" id="logo-container">
+                <!-- Logotipo inyectado -->
+            </div>
+            <div class="system-status-indicator">
+                <span class="status-dot-green"></span>
+                <span id="server-status-tag" class="status-code-text">SERVER STATUS: ACTIVE</span>
+            </div>
+        </header>
+
+        <!-- REJILLA DE WIDGETS GLASSMORPHIC (DASHBOARD GRID) -->
+        <section class="dashboard-grid">
+            
+            <!-- WIDGET 1: Identidad y Misión (Brand Card) -->
+            <article class="dashboard-card widget-brand">
+                <div class="card-header">
+                    <span class="card-title-code">WIDGET // 01</span>
+                    <span class="card-dot-decor"></span>
+                </div>
+                <div class="card-body">
+                    <h2 class="brand-hero-title" id="server-claim">ZYRA STORE</h2>
+                    <p class="brand-hero-desc" id="server-description">Next-generation resources for FiveM roleplay servers. Built for performance, optimized for quality.</p>
+                </div>
+            </article>
+
+            <!-- WIDGET 2: Enlaces Rápidos con LEDs (Links Card) -->
+            <article class="dashboard-card widget-links" id="socials-panel">
+                <div class="card-header">
+                    <span class="card-title-code">WIDGET // 02</span>
+                    <span class="card-dot-decor"></span>
+                </div>
+                <div class="card-body">
+                    <h3 class="widget-section-title">COMMUNITY PORTALS</h3>
+                    <div class="tech-links-grid" id="social-links-grid">
+                        <!-- Enlaces de redes NUI -->
+                    </div>
+                </div>
+            </article>
+
+            <!-- WIDGET 3: Reproductor de Audio con Barra de Onda (Audio Widget) -->
+            <article class="dashboard-card widget-music" id="music-card-wrapper">
+                <div class="card-header">
+                    <span class="card-title-code">WIDGET // 03</span>
+                    <span class="card-dot-decor"></span>
+                </div>
+                <div class="card-body music-player-body">
+                    <div class="music-meta-container">
+                        <div class="music-info-text">
+                            <h4 class="track-title-text" id="track-title">NO TRACK PLAYING</h4>
+                            <p class="track-artist-text" id="track-artist">WAITING FOR INTERACTION</p>
+                        </div>
+                        <!-- Botón Play/Pause NUI -->
+                        <button id="play-pause-btn" class="tech-play-btn" aria-label="Play/Pause">
+                            <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                            <svg id="pause-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Wave Visualizer animado en CSS/JS -->
+                    <div class="music-visualizer-container" id="visualizer">
+                        <span class="wave-bar"></span>
+                        <span class="wave-bar"></span>
+                        <span class="wave-bar"></span>
+                        <span class="wave-bar"></span>
+                        <span class="wave-bar"></span>
+                        <span class="wave-bar"></span>
+                        <span class="wave-bar"></span>
+                        <span class="wave-bar"></span>
+                        <span class="wave-bar"></span>
+                        <span class="wave-bar"></span>
+                    </div>
+
+                    <div class="music-slider-controls">
+                        <div class="volume-mute-group">
+                            <button id="volume-mute-btn" class="vol-btn-mute" aria-label="Mute">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="vol-svg-icon">
+                                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                                </svg>
+                            </button>
+                            <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.15" class="vol-range-slider">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- WIDGET 4: Novedades del Servidor / Logs de Consola (News Logs Card) -->
+            <article class="dashboard-card widget-news">
+                <div class="card-header">
+                    <span class="card-title-code">WIDGET // 04</span>
+                    <span class="card-dot-decor"></span>
+                </div>
+                <div class="card-body logs-panel-body">
+                    <h3 class="widget-section-title">SYSTEM CHANGELOGS</h3>
+                    <div class="terminal-logs-wrapper" id="timeline-feed-wrapper">
+                        <!-- Inyectado dinámicamente -->
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- SECCIÓN INFERIOR DE CARGA (DIGITAL BLOCK LOADER) -->
+        <footer class="dashboard-footer">
+            
+            <div class="loader-meta-row">
+                <div class="status-console-log">
+                    <span class="console-prefix">> SYS:</span>
+                    <span id="log-text" class="console-text">Initializing connection sequence...</span>
+                </div>
+                <div class="percentage-count-wrapper">
+                    <span class="percentage-label">LOAD_PCT:</span>
+                    <span id="progress-val-text" class="percentage-value-text">0%</span>
+                </div>
+            </div>
+
+            <!-- Barra Segmentada de Bloques Digitales -->
+            <div class="digital-bar-container">
+                <div class="digital-progress-track">
+                    <div class="digital-progress-bar" id="progress-bar"></div>
+                </div>
+            </div>
+
+            <div class="footer-bottom-info">
+                <span id="music-tip-text" class="music-tip-hint">PRESS SPACE TO PLAY/PAUSE MUSIC</span>
+                <span>BUILD // SECURE_NUI_V2.0</span>
+            </div>
+            
+        </footer>
+
+    </main>
+
+    <!-- Elemento Audio Oculto -->
+    <audio id="bg-audio" loop preload="auto"></audio>
+
+    <!-- Scripts Modulares -->
+    <script src="js/config.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/news.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+/* ==========================================================================
+   ZYRA STORE - VARIABLES CSS Y COLORES DEL DASHBOARD (PREMIUM)
+   ========================================================================== */
+
+:root {
+    /* Paleta Tecnológica Oscura */
+    --bg-pure-black: #030303;
+    --bg-panel-dark: #090909;
+    --bg-glass-card: rgba(10, 10, 10, 0.45);
+    
+    /* Bordes Tecnológicos */
+    --border-glass: 1px solid rgba(255, 255, 255, 0.035);
+    --border-glass-active: 1px solid rgba(0, 245, 255, 0.25);
+    
+    /* Colores del acento de luz (Electric Cyan) */
+    --accent-pure-white: #00f5ff;
+    --accent-glow: rgba(0, 245, 255, 0.2);
+    
+    /* Colores de lectura de datos */
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #475569;
+    
+    --font-heading: 'Orbitron', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-size-base: 16px;
+    
+    /* Configuración de Transiciones */
+    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.2);
+}
